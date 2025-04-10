@@ -14,6 +14,7 @@
 
 2. 创建虚拟环境：
    ```
+   conda remove -n huoshan-voice-copy --all -y
    conda create -n huoshan-voice-copy python=3.10
    conda activate huoshan-voice-copy
    ```

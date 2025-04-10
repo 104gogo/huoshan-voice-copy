@@ -38,7 +38,7 @@ request_json = {
     },
     "request": {
         "reqid": str(uuid.uuid4()),
-        "text": "哈哈哈，我是可莉，大家好，我爱你们哦",
+        "text": "哈哈，你这人很烦诶～一直看一直看，是没见过美女骑机车吗？信不信我油门一拧直接喷你一脸尾气！再盯着看就把你载到山顶喂蚊子哦～",
         "text_type": "plain",
         "operation": "query",
         "with_frontend": 1,

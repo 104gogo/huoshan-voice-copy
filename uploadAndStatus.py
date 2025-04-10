@@ -49,7 +49,7 @@ if __name__ == "__main__":
     token = "" # access_token
     spk_id = "" # voice
 
-    train(appid=appid, token=token, audio_path=r"C:\Users\gogo\Desktop\keli.mp3", spk_id=spk_id)
+    train(appid=appid, token=token, audio_path=r".\audios\xiaohe.wav", spk_id=spk_id)
 
     get_status(appid=appid, token=token, spk_id=spk_id)
     
