@@ -49,6 +49,7 @@ request_json = {
 
 if __name__ == '__main__':
     try:
+        print(json.dumps(request_json))
         resp = requests.post(api_url, json.dumps(request_json), headers=header)
         print(f"resp body: \n{resp.json()}")
         if "data" in resp.json():
