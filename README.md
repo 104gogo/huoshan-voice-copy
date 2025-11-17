@@ -1,10 +1,14 @@
 # 火山声音克隆工具
 
-这是一个使用火山引擎API进行声音克隆的工具。该工具可以创建自定义音色，并使用HTTP方式生成语音。
+这是一个使用火山引擎API进行声音克隆的工具。该工具也可以用来测试火山引擎声音克隆功能。
+- 克隆自定义音色
+- 使用克隆的音色通过HTTP方式生成语音
+- 使用克隆的音色通过双流式语音合成生成语音
 
 ## 环境设置
 
-本项目使用 Conda 进行虚拟环境和依赖管理。
+音色克隆使用 Conda 进行虚拟环境和依赖管理。
+双流式语音合成使用 nodejs 和 npm 进行依赖管理。
 
 ### 首次设置
 
@@ -31,20 +35,30 @@
 ### 运行方式
 
 1. 创建音色
-   ```
-   python uploadAndStatus.py
-   ```
-   - 此脚本用于上传音频样本并创建自定义音色
-   - 需要准备一段清晰的语音样本（建议使用 wav 格式），时长在10s左右最好
+```
+python uploadAndStatus.py
+```
+- 此脚本用于上传音频样本并创建自定义音色
+- 需要准备一段清晰的语音样本（建议使用 wav 格式），时长在10s左右最好
 
 2. 测试音色（HTTP方式）
-   ```
-   python tts_http_demo.py
-   ```
-   - 使用HTTP方式生成语音
-   - 修改代码中的 text 变量来更改要转换的文本内容
-   - 生成的音频将保存为 test_submit.mp3
-   - 适合短文本转换
+```
+python tts_http_demo.py
+```
+- 使用HTTP方式生成语音
+- 修改代码中的 text 变量来更改要转换的文本内容
+- 生成的音频将保存为 test_submit.mp3
+- 适合短文本转换
+
+
+3. 测试双流式语音合成
+在 src/volcengine/bidirection.ts 文件填入你的appid，access_token，voice_type（克隆的音色id），然后执行下面命令
+```
+cd volcengine_bidirection_demo
+npm install
+npm run clone
+```
+
 
 ## 注意事项
 
